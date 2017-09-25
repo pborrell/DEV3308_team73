@@ -4,3 +4,4 @@ Post here for ideas regarding any other bp's.
 
 If you work on a feature, work in a branch (creat with git checkout -b [name]-feature
 
+The waffle.io page is located at : https://waffle.io/pborrell/DEV3308_team73/join
