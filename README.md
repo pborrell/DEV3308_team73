@@ -10,10 +10,10 @@ Motivation:
 
 Risks:
 
-Risk Migation Plan:
+Risk Migation Plan:			Using the branch statndards.txt document
 
-Version Control:
+Version Control:			GIT
 
-Development Method:
+Development Method:			Agile
 
-Collaboration Tool:
+Collaboration Tool:			Waffle.io integrated with github
