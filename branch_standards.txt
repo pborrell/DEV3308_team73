@@ -1,0 +1,6 @@
+Let's try to maintain best practices with GIT commiting and pushing.
+
+Post here for ideas regarding any other bp's.
+
+If you work on a feature, work in a branch (creat with git checkout -b [name]-feature
+
