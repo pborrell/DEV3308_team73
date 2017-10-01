@@ -8,13 +8,15 @@ Members:
 	Ziheng Zhu
 	Serena Buxton
 
-Vision Statement:	
+Description:	
 	The main idea is to create a general purpose platform for IT or HR department to test end user's susceptibility to phishing attacks. The purpose of this is to see if people need training to avoid them. It is invaluable to have the ability to test and train people from this type of social engineering attack.
 					
 	Beyond that we believe end users would enjoy being part of the blue-team after being tested. A company's security is as strong as the weakest link in the security chain. Since phising is a social engineering attack, it is ideal train end-users to avoid the attacks.
 
 	We will be adding some configuration options to the PHP that will have documentation for how to change the functions. This will allow for us to set it so we can email an IT department, the user, not write anything, or anything else we can think of.
-						
+
+Vision Statement:
+	We wanted to find a way to play with multiple CSS profiles and a lot of database interaction onto of doing a little social engineering.					
 Motivation:	
 	We want to do this so we can write a web application that has multiple database interactions and using multiple CSS on one website page, a "theme'. The security leak of Equifax's information might result in more phishing attacks to collect dots that are not included in a credit reporting company's databases.
 
