@@ -25,3 +25,11 @@ Fields, are labeled based on how the database is set up so we can grab the $_req
 Screens: These are based on the themes set up for the front end.
 Regulatory/Compliance Requirements:
 Do not collect mother's maiden name, passwords, numbers that aren't phone numbers or any other information that is overly personal.
+
+
+Scrum meeting:
+	Said we needed to work on project and agreed to finish on dead line.
+	All basicly said 'work on the project' for what we're doing for the sprint. We set up the sprints and we need to work on them based on the outlined sprints on waffle.io
+What have you done since the last scrum? Nothing
+What will you do before the next scrum? Finish Sprint
+What is blocking you? Just not doing it

@@ -34,7 +34,7 @@ Development Method:
 	Agile, we will work on multiple features at a time with people doing different things concurrently. We are going to test features on a branch outside of master and when ever we get something working we will merge it back into master. Afterward we will down stream working features so we have an idea how the end project will work when we get later in the project. 
 
 Collaboration Tool:
-	Waffle.io integrated with GIThub. Google Hangouts for communication and remote collaboration.
+	Waffle.io integrated with GIThub. Google Hangouts for communication and remote collaboration and adding GroupMe to talk amongst.
 
 Proposed Architecture:	
 	The back end will be running off a MySQL database that will be read every time the page loads and written to every time a form is submitted. The form will write a first name, last name, and the email address to the database to minimize the amount of collected personal information for this project.
