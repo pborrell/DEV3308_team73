@@ -1,0 +1,27 @@
+Project Management Tool:
+We will be using waffle.io for the course of the project due to git hub intergration
+We will be creating milestone and feature tags as we go along.
+See the Waffle.io page for more details.
+There will be 3 sprints.
+sprint 1, database and first front end theme
+spring 2, get the css done for all themes created and make the webpages themselves
+sprint 3, front end finishings
+
+Functional Requirements:
+Name – Themes
+Brief Description – A css theme used to make the site look secure and legitimate so that the end user is incised to enter information.
+Actors – Victim: Person who enters information into the forms for a news letter or something
+IT personal: Person who reads database and informs the victim that they fell for a phishing site.
+Preconditions – View the site
+Basic Flow – Victim: View site and enter information, be assured that the news letter will be sent to them.
+IT personal: Look at database and see if someone entered information.
+Alternate Flows – Not enough information entered, in this case the database will not be written
+Exception Flows – Inform victim that the information they provided didn't meet the requires for the newsletter or something
+Post Conditions – Congratulate user on getting the news letter or something signed up for based on theme.
+
+Non-Functional Requirements:
+Interface requirements:
+Fields, are labeled based on how the database is set up so we can grab the $_request section for only three or four different fields. All other fields will be given names that should result in PHP parsing errors.
+Screens: These are based on the themes set up for the front end.
+Regulatory/Compliance Requirements:
+Do not collect mother's maiden name, passwords, numbers that aren't phone numbers or any other information that is overly personal.
