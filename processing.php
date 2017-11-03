@@ -8,42 +8,44 @@ $card = $_REQUEST['card'];
 if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/", $email) === TRUE){
 $connect = @mysqli_connect ('localhost', 'DEV3708a',
 'pass', 'GonePhishin');
-	$sql = "CREATE TABLE IF NOT EXIST 'header' (
-		'id' int(10) NOT NULL,
-		'css' varchar(5000) NOT NULL
-		PRIMARY KEY('id')
-	)ENGINE = MyISAM DEFAULT CHARSET=utf8;
+	$sql = "CREATE TABLE IF NOT EXISTS 'credit' (
+  'key' INT(10) NOT NULL AUTO_INCREMENT,
+  'email' varchar(120) NOT NULL,
+  'card_present' tinyint(1) DEFAULT NULL,
+    PRIMARY KEY ('key')
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-		CREATE TABLE IF NOT EXIST 'email' (
-		'email' varchar(120) NOT NULL,
-		'trap' varchar(5) NOT NULL
-		PRIMARY KEY('email')
-	)ENGINE = MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS 'donations' (
+  'key' INT(10) NOT NULL AUTO_INCREMENT,
+  'donations' varchar(12) DEFAULT NULL,
+    PRIMARY KEY ('key')
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-	CREATE TABLE IF NOT EXIST 'donations' (
-		'email' varchar(120) NOT NULL,
-		'donations' varchar(12)
-		PRIMARY KEY('email')
-	)ENGINE = MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS 'email' (
+  'key' INT(10) NOT NULL AUTO_INCREMENT,
+   'email' varchar(120) NOT NULL,
+  'trap' varchar(5) NOT NULL,
+     PRIMARY KEY ('key')
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-	CREATE TABLE IF NOT EXIST 'name' (
-		'email' varchar(120) NOT NULL,
-		'first' varchar(20),
-		'last' varchar(45)
-		PRIMARY KEY('email')
-	)ENGINE = MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS 'header' (
+  'id' int(10) NOT NULL,
+  'css' varchar(5000) NOT NULL,
+   PRIMARY KEY('id')
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-	CREATE TABLE IF NOT EXIST 'credit'(
-		'email' varchar(120) NOT NULL),
-		'card_present' tinyint(1)
-		PRIMARY KEY ('email')
-		)ENGINE = MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS 'name' (
+  'key' INT(10) NOT NULL AUTO_INCREMENT,
+  'first' varchar(20) DEFAULT NULL,
+  'last' varchar(45) DEFAULT NULL,
+     PRIMARY KEY ('key')
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 	";
 	if ($connect->query($sql) === TRUE){
-		$sql = "INSERT INTO 'email' ('email', 'trap') VALUES ('$email', '$id'); 
-		INSERT INTO 'donations'('email', 'donations') VALUES ('$email', '$donations');
-		INSERT INTO 'name'('email', 'last', 'first') VALUES ('$email', '$last_name', '$first_name');
-		INSERT INTO 'credit' ('email', 'card_present') VALUES ('$email', '$card');
+		$sql = "INSERT INTO 'email' ('key', 'email', 'trap') VALUES (null, '$email', '$id'); 
+		INSERT INTO 'donations'('key', 'donations') VALUES (null, '$donations');
+		INSERT INTO 'name'('key', 'last', 'first') VALUES (null, '$last_name', '$first_name');
+		INSERT INTO 'credit' (key, 'card_present') VALUES (null, '$card');
 		";
 	}
 		if ($connect->query($sql) === TRUE){
