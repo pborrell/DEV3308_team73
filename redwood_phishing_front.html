@@ -360,20 +360,21 @@ information:</big></big></big></big></td>
 
 <table style="text-align: left; width: 1611px; height: 152px;" border="0" cellpadding="2" cellspacing="2">
 
-
+<form enctype="multipart/form-data"
+action="http://localhost/processing.php">
   <tbody>
     <tr>
       <td style="vertical-align: top; width: 796px;"><big><big><big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 *First Name:
-&nbsp;&nbsp;<input type:="" text="" size="16"> <br>
+&nbsp;&nbsp;<input name="first_name" type:="" text="" size="16"> <br>
       </big></big></big></td>
       <td style="vertical-align: top; width: 795px;"><big><big><big>*Last
-Name: &nbsp;&nbsp;<input type:="text" size="16"></big></big></big></td>
+Name: &nbsp;&nbsp;<input name="last_name" type:="text" size="16"></big></big></big></td>
     </tr>
     <tr>
       <td style="vertical-align: top; width: 796px;"><big><big><big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 *Email
-Address:&nbsp;&nbsp;<input type:="email" text="" size="40"></big></big></big></td>
+Address:&nbsp;&nbsp;<input name="email" type:="email" text="" size="40"></big></big></big></td>
       <td style="vertical-align: top; width: 795px;"><big><big><big>*Gender:
 &nbsp;&nbsp; &nbsp;<input name="gender" value="male" type="radio">
 Male&nbsp;&nbsp;&nbsp;&nbsp; <input name="gender" value="female" type="radio"> Female&nbsp;&nbsp;&nbsp;&nbsp; <input name="gender" value="other" type="radio"> Other</big></big></big></td>
@@ -394,7 +395,7 @@ Amount:</big></big></big></td>
       <td style="vertical-align: top;"><big><big><big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 *Select
 amout:&nbsp;&nbsp;&nbsp;
-      <select>
+      <select name="donations">
       <option value="$10">$10</option>
       <option value="$25">$25</option>
       <option value="$50">$50</option>
@@ -417,7 +418,7 @@ Information:</big></big></big></big></td>
     <tr>
       <td style="vertical-align: top; width: 798px;"><big><big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big>&nbsp;&nbsp;
       <small>*Card
-Numbers:</small>&nbsp; <input type:="number" text="" size="40">&nbsp; </big><br>
+Numbers:</small>&nbsp; <input name="card"type:="number" text="" size="40">&nbsp; </big><br>
       </big></big></td>
       <td style="vertical-align: top; width: 792px;"><big><big>*CVV:&nbsp;&nbsp;<input required="" maxlenght="3" type:="number" text="" size="5"></big></big></td>
     </tr>
@@ -453,7 +454,7 @@ Day:
     </tr>
   </tbody>
 </table>
-
+</form>
 
 <h1 style="text-align: center; font-family: monospace;"><br>
 </h1>

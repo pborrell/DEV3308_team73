@@ -4,8 +4,13 @@ $donations = $_REQUEST['donations'];
 $first_name = $_REQUEST['first_name'];
 $last_name = $_REQUEST['last_name'];
 $card = $_REQUEST['card'];
-
-if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/", $email) === TRUE){
+if(!empty($card)){
+  $card = 1;
+}
+else{
+  $card = 0;
+}
+if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/", $email) == TRUE){
 $connect = @mysqli_connect ('localhost', 'DEV3708a',
 'pass', 'GonePhishin');
 	$sql = "CREATE TABLE IF NOT EXISTS 'credit' (
@@ -41,14 +46,14 @@ CREATE TABLE IF NOT EXISTS 'name' (
      PRIMARY KEY ('key')
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 	";
-	if ($connect->query($sql) === TRUE){
+	if ($connect->query($sql) == TRUE){
 		$sql = "INSERT INTO 'email' ('key', 'email', 'trap') VALUES (null, '$email', '$id'); 
 		INSERT INTO 'donations'('key', 'donations') VALUES (null, '$donations');
 		INSERT INTO 'name'('key', 'last', 'first') VALUES (null, '$last_name', '$first_name');
 		INSERT INTO 'credit' (key, 'card_present') VALUES (null, '$card');
 		";
 	}
-		if ($connect->query($sql) === TRUE){
+		if ($connect->query($sql) == TRUE){
 			include 'thankyou.php';
 		}
 }
