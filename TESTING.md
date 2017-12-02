@@ -52,3 +52,11 @@ function validatecard($number)
  }
 
 I.E. if 4782002049069240 is entered, the card type will be read as visa and will be accepted with no issue. If I were to enter 2348 0845 7632 0020, the card would not be accepted and the user would be taken to the "invalid card" page.
+
+
+UAT 2: 
+In the "email" field, the user is required to entire a valid email address format. We use regex in php to check whether the customer has entered an accurate email address including ...@...(.org, .net, etc.). 
+
+if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/", $email) === TRUE)
+
+I.E. If I were to enter sepa2099@colorado.edu the donation would go through (assuming all other fields are filled in correctly), but if I were to enter jack+35, the user would be taken to a webpage saying that the email they entered was invalid.
