@@ -10,3 +10,45 @@
 4.  Automated Tests:
 
 5.  User Acceptance Tests:
+
+UAT 1:
+For the "credit" text field, the user is required to enter a 16 digit number without spaces or special characters. The number is also categorized into one of the 4 major card types based on the number's composition. Both of these actions are completed through regex in our processing.php file. This is to ensure that all credit card numbers entered in the database are valid. If the card isn't valid when the donate button is pressed, the user is redirected to a page saying that the card they entered is invalid.
+
+function validatecard($number)
+ {
+    global $type;
+    $cardtype = array(
+        "visa"       => "/^4[0-9]{12}(?:[0-9]{3})?$/",
+        "mastercard" => "/^5[1-5][0-9]{14}$/",
+        "amex"       => "/^3[47][0-9]{13}$/",
+        "discover"   => "/^6(?:011|5[0-9]{2})[0-9]{12}$/",
+    );
+    if (preg_match($cardtype['visa'],$number))
+    {
+  $type= "visa";
+        return TRUE;
+  
+    }
+    else if (preg_match($cardtype['mastercard'],$number))
+    {
+  $type= "mastercard";
+        return TRUE;
+    }
+    else if (preg_match($cardtype['amex'],$number))
+    {
+  $type= "amex";
+        return TRUE;
+  
+    }
+    else if (preg_match($cardtype['discover'],$number))
+    {
+  $type= "discover";
+        return TRUE;
+    }
+    else
+    {
+        return false;
+    } 
+ }
+
+I.E. if 4782002049069240 is entered, the card type will be read as visa and will be accepted with no issue. If I were to enter 2348 0845 7632 0020, the card would not be accepted and the user would be taken to the "invalid card" page.
