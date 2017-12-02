@@ -9,7 +9,12 @@ $donations = $_REQUEST['donations'];
 $first_name = $_REQUEST['first_name'];
 $last_name = $_REQUEST['last_name'];
 $card = $_REQUEST['card'];
-if(!empty($card)){
+$emailCheck = FALSE;
+$firstNameCheck = FALSE;
+$lastNameCheck = FALSE;
+$donationsCheck = FALSE;
+
+if(!empty($card && is_numeric($card))){
   $card = 1;
 }
 else{
@@ -48,8 +53,22 @@ $createName = "CREATE TABLE IF NOT EXISTS 'name' (
      PRIMARY KEY ('key')
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8";
 
-if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3,}$/", $email) == TRUE)
-{
+if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3,}$/", $email)){
+  $emailCheck = TRUE
+}
+if(preg_match(("/0-9]{16}/"), $card)){
+  $cardCheck = TRUE;
+}
+if(preg_match("/[A-Za-z]}+/", $last_name)){
+  $lastNameCheck = TRUE;
+}
+if(preg_match("/[A-Za-z]}+/", $first_name)){
+  $firstNameCheck = TRUE;
+}
+if(is_numeric($donations) && $donations > 0){
+  $donationsCheck = TRUE;
+}
+if($emailCheck == TRUE && $cardCheck == TRUE && $lastNameCheck == TRUE && $firstNameCheck == TRUE)
   $conn = new mysqli("127.0.0.1", "root", "pass", "GonePhishin");
 
 
@@ -98,7 +117,23 @@ if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3,}$/", $email) == 
 }
 
 else{
-print "An error occured, make sure your email is valid.";
+ $errors = ""
+ if($email == FALSE){
+  $errors = $errors . "email";
+ }
+ if($firstNameCheck == FALSE){
+  $errors = $error . "First Name";
+ }
+ if($lastNameCheck == FALSE){
+  $errors = $errors . "Last Name";
+ }
+ if($cardCheck == FALSE){
+  $errors = $errors . "Credit Card";
+ }
+ if($donationsCheck == FALSE){
+  $errors = $errors . "Donation Amount";
+ }
+print "An error occured, make sure your '$errors' is valid.";
 include 'index.php';
 }
 ?>
