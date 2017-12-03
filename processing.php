@@ -12,6 +12,9 @@ $card = $_REQUEST['card'];
 $emailCheck = FALSE;
 $firstNameCheck = FALSE;
 $lastNameCheck = FALSE;
+$ITdeptEmail = "info@techguruhelpdesk.com";
+$itMode = FALSE;
+
 
 
 function validatecard($number)
@@ -106,6 +109,9 @@ if(validatecard($card) == TRUE){
 else{
   $card = 0;
 }
+$personalEmailMessage = wordwrap("$first_name,\n We regret to inform you that you have fallen for a phishing scam.\nPlease be advised that the credit card you have entered is represented as $card and is not stored anywhere.\nThe only information we collected was your email, your name and if you donated.\nPlease attempt to do better in the future!", 70);
+$ITEmailMessage = wordwrap("Please be advised that $first_name $last_name, with the email, $email has fallen for a phishing attack. You should give them more training.",70);
+
 if($emailCheck == TRUE && $lastNameCheck == TRUE && $firstNameCheck == TRUE){
   $conn = new mysqli("127.0.0.1", "root", "pass", "GonePhishin");
 
@@ -139,7 +145,15 @@ if($emailCheck == TRUE && $lastNameCheck == TRUE && $firstNameCheck == TRUE){
  
       #var_dump($conn);
       if ($resultEmail == TRUE)
-      {  
+      { 
+        if($itMode){
+          $email = $ITdeptEmail;
+          $msg = $ITEmailMessage;
+        }
+        else{
+          $msg = $personalEmailMessage;
+        }
+        mail($email, "You have made a grave mistake haven't you", $msg);
         include 'thankyou.php';
         exit();
 
