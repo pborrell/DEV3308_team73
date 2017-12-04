@@ -7,7 +7,11 @@
 
 3. We wanted to find a way to play with multiple CSS profiles and a lot of database interaction onto of doing a little social engineering. Motivation: We want to do this so we can write a web application that has multiple database interactions and using multiple CSS on one website page, a "theme'. The security leak of Equifax's information might result in more phishing attacks to collect dots that are not included in a credit reporting company's databases
 
-4.  Automated Tests:
+4.  Automated Tests: 
+Automated testing can be useful for running automated tests of all app components after any changes are made to make sure that the changes didn't break anything in the rest of the code. PHPUnit is a common testing tool for PHP. It works to test Unit Cases on functions within classes in the code. The PHP code for our project is a web application that does not contain any laces where a unit case occurs that should be tested. Thus, for our project automated testing is not applicable. Instead we will put additional effort into manual testing and user acceptance tests. 
+
+To manually test our application we are going to step through the application trying every link and inputting various inputs, both inputs that work and don’t work. For each of the front ends we will test to make sure the initial link goes to the first page of the webpage (if there are multiple). We will then click every link to ensure it goes to the appropriate place. When the form is reached the form will be filled out with various inputs that work and don't work and we will test to make sure the corresponding result aligns with the desired result. If one of the fields is invalid it will take the user to an error page and if all fields are valid then it will take the user to a success page. More specific information how the tests are set up for the form is described below. Finally, we will test that an email properly sends to the user informing them that they have fallen for a phishing attack. To test this we will check the email for the corresponding email that should have been sent.
+ 
 
 5.  User Acceptance Tests:
 
