@@ -64,3 +64,10 @@ In the "email" field, the user is required to entire a valid email address forma
 if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/", $email) === TRUE)
 
 I.E. If I were to enter sepa2099@colorado.edu the donation would go through (assuming all other fields are filled in correctly), but if I were to enter jack+35, the user would be taken to a webpage saying that the email they entered was invalid.
+
+UAT 3: 
+The first name and last name field should only take valid names. This means that the name field can not take numbers or symbols such as question marks, etc. It is also important the this considers names from other languages that might have additonal characters not in the latin alphebet. 
+if(preg_match("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u", $last_name) == TRUE) 
+the same statement is used for first name but $last_name is replaced with $first_name
+
+I.E. If I were to enter John for the first name and Doe for the last name the donation would go through and take the user to a success page. On the other hand if I were to enter 1234 the user would be taken to an error page. 
