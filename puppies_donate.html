@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -54,7 +54,7 @@
 
              </div>
       </div>
-
+      <form enctype="multipart/form-data" action="http://localhost/processing.php"> 
       <div class="container">
       <div class="row">
             <h3>Basic Information</h3><br>
@@ -63,16 +63,16 @@
 
       <div class="row justify-content-md-center">
             <div class="col-md-5">
-                  First Name: <input name="First Name">
+                  First Name: <input name="first_name">
             </div>
             <div class="col-md-5">
-             Last Name: <input name="Last Name"><br>
+             Last Name: <input name="last_name"><br>
            </div>
            <br><br>
          </div>
          <div class="row">
-          <div class="col-md-5 offset-md-1">
-            Email:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input name="Email" size="40"><br>
+          <div class="col-md-10 offset-md-1">
+            Email:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input name="email" size="40"><br>
             <br>
             </div>
       </div>
@@ -87,7 +87,7 @@
       <input name="donation" value="20" type="radio"> $20<br>
       <input name="donation" value="50" type="radio"> $50<br>
       <input name="donation" value="other" type="radio"> Other &nbsp;<input
-      name="otherdonation"><br>
+      name="donations"><br>
     </div>
     </div>
     </div>
@@ -98,7 +98,7 @@
     </div>
     <div class="row justify-content-md-center">
       <div class="col-md-5">
-      Credit Card Number: <input name="cardnum">
+      Credit Card Number: <input name="card">
     </div>
     <div class="col-md-5">
       CVV: <input
@@ -181,9 +181,10 @@
 <br>
 <div class="container">
   <div class="row justify-content-md-center">
-<button type="button" class="btn"><H2>Donate!</H2></button>
+    <input type="submit" value="Donate!" /> 
 </div>
 </div>
+</form>
 <br>
 <br>
 <br>
