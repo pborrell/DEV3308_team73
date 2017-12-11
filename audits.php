@@ -34,7 +34,7 @@
 		switch ($display) {
 			case 'email':
 				$query = "SELECT * FROM emails;";
-				print "key email<br/>";
+				print "<pre>key  email                                     page</pre>";
 				break;
 			case 'cards':
 				$query = "SELECT * FROM credit;";
@@ -46,7 +46,7 @@
 				break;
 			case 'name':
 				$query = "SELECT * FROM name;";
-				print "key first name, last<br/>";
+				print "<pre>key   first name          last name</pre>";
 				break;
 			case 'all':
 				$query = "select credit.key, credit.card_present, donations.donations, emails.email, emails.trap, name.first, name.last from credit, donations, emails, name where donations.key = credit.key AND donations.key = emails.key AND donations.key = name.key";
