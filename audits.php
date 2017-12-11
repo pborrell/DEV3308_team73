@@ -49,13 +49,13 @@
 				print "key first name, last<br/>";
 				break;
 			case 'all':
-				$query = "select credit.key, credit.card_present, donations.donations, emails.email, name.first, name.last from credit, donations, emails, name where donations.key = credit.key AND donations.key = emails.key AND donations.key = name.key";
-				print "<pre>key   card_present   donations email                 first      last<br/></pre>";
+				$query = "select credit.key, credit.card_present, donations.donations, emails.email, emails.trap, name.first, name.last from credit, donations, emails, name where donations.key = credit.key AND donations.key = emails.key AND donations.key = name.key";
+				print "<pre>key   card_present   donations email                    page       first      last<br/></pre>";
 				break;
 		} 
 		$results = mysqli_query($conn, $query);
 		while ($row = mysqli_fetch_array($results, MYSQLI_NUM)) { 
-			echo "<pre>".$row[0]."     ".$row[1]."                ".$row[2]."    ".$row[3]."   ".$row[4]."   ".$row[5]."<br></pre>";
+			echo "<pre>".$row[0]."     ".$row[1]."                ".$row[2]."    ".$row[3]."   ".$row[4]."   ".$row[5] ."       "."$row[6]"."<br></pre>";
 		}
 	}
 	$conn->close();
