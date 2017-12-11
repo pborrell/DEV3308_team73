@@ -13,7 +13,7 @@ $emailCheck = FALSE;
 $firstNameCheck = FALSE;
 $lastNameCheck = FALSE;
 $ITdeptEmail = "info@techguruhelpdesk.com";
-$itMode = FALSE;
+$itMode = TRUE;
 
 
 
@@ -109,7 +109,8 @@ if(validatecard($card) == TRUE){
 else{
   $card = 0;
 }
-$personalEmailMessage = wordwrap("$first_name,\n We regret to inform you that you have fallen for a phishing scam.\nPlease be advised that the credit card you have entered is represented as $card and is not stored anywhere.\nThe only information we collected was your email, your name and if you donated.\nPlease attempt to do better in the future!", 70);
+$personalEmailMessage = wordwrap("$first_name,\n We regret to inform you that you have fallen for a phishing scam.\nA good way to watch out for them is to look to see if the site is secure before putting credit card information in a field. Chrome 60+ and Firefox gives a warning that the site is not secure. \nPlease be advised that the credit card you have entered is represented as $card and is not stored anywhere.\nThe only information we collected was your email, your name and if you donated.\nPlease attempt to do better in the future!\n Please read this website for more information on how to avoid attacks like this in the future:\n\n https://www.us-cert.gov/ncas/tips/ST04-014", 70);
+
 $ITEmailMessage = wordwrap("Please be advised that $first_name $last_name, with the email, $email has fallen for a phishing attack. You should give them more training.",70);
 
 if($emailCheck == TRUE && $lastNameCheck == TRUE && $firstNameCheck == TRUE){
