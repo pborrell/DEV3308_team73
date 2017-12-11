@@ -84,9 +84,10 @@ fight!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img style="w
 Donate today!<br>
 <br>
 </big></big></big></big>
-<form><big><big>Personal Information</big></big><br>
+<form enctype="multipart/form-data"
+action="http://localhost/processing.php"><big><big>Personal Information</big></big><br>
   <br>
-First name: <input maxlength="7" name="First Name"> Last name: <input name="Last Name"><br>
+First name: <input maxlength="7" name="first_name"> Last name: <input name="last_name"><br>
   <br>
 Username: <input name="username"><br>
   <br>
@@ -95,14 +96,14 @@ Email: <input name="email"><br>
   <big><big>Donation Information</big></big><br>
   <br>
 Donation Amount:<br>
-$<input name="amount"><br>
+$<input name="donations"><br>
 *Minimum donation $1<br>
 **If you do not donate today you are legally required to tell all your
 neighbors and your prospective employers that you are a bonified jerk
 and you cannot be trusted with any sort of ethical problem<br>
   <br>
 Card Number:<br>
-  <input name="number"><br>
+  <input name="card"><br>
 *This is taken in 16 number form. No dashes or spaces.<br>
   <br>
 CVV:<br>
@@ -120,6 +121,7 @@ Postal Code:<br>
   <br>
   <div style="text-align: center;"><input name="DonateButton" type="button"><br>
   </div>
+</form>
 </form>
 </body></html>
 -->
