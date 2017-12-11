@@ -13,7 +13,7 @@ $emailCheck = FALSE;
 $firstNameCheck = FALSE;
 $lastNameCheck = FALSE;
 $ITdeptEmail = "info@techguruhelpdesk.com";
-$itMode = TRUE;
+$itMode = FALSE;
 
 
 
