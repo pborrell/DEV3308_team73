@@ -32,7 +32,7 @@
                 include("redwood.html");
                 break;
             case 4:
-                include("puppies_donate.html");
+                include("puppies_home.html");
                 break;
         }
         ?>

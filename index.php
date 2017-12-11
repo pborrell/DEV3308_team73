@@ -24,7 +24,7 @@
         
         <form enctype="multipart/form-data" action="Fem.html"><input type="submit" value="Feminist News Letter" /> </br></form>
         <form enctype="multipart/form-data" action="redwood.html"><input type="submit" value="Save the Red Wood Trees" /> </br></form>
-        <form enctype="multipart/form-data" action="puppies_donate.html"><input type="submit" value="Stand Up to Animal Abuse" /> </br></form>
+        <form enctype="multipart/form-data" action="puppies_home.html"><input type="submit" value="Stand Up to Animal Abuse" /> </br></form>
         <form enctype="multipart/form-data" action="Partner_Patch_Front_End.html"><input type="submit" value="Partner Pat" /> </br></form>
 </td></tr>
 </table>
