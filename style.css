@@ -1,0 +1,113 @@
+body {
+	color: #000305;
+	font-size: 87.5%;
+	font-family: Arial, 'Lucida Sans Unicode';
+	line-height: 1.5;
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+
+}
+
+a:link, a:visited {
+
+}
+
+a:hover, a:active {
+
+}
+
+.body {
+	margin: 0 auto;
+	width: 70%;
+	clear: both;
+
+}
+
+.navigation img {
+	width: 30%;
+	height: auto;
+	margin: 2% 0;
+}
+
+.navigation nav{
+	background-color: #666;
+	height: 40px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.navigation nav ul {
+	list-style: none;
+	margin: 0 auto;
+}
+
+.navigation nav ul li{
+	float: left;
+	display: inline;
+}
+
+.navigation nav a:link, .navigation nav a:visited {
+	color: #FFF;
+	display: inline-block;
+	padding: 10px;
+	height: 20px;
+}
+
+.navigation nav a:hover,
+.navigation nav .active a:link{
+	background-color: #FFB6C1;
+	text-shadow: none;
+}
+
+.navigation nav ul li a {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.mainContent {
+	line-height: 25px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	overflow: hidden;
+}
+
+.topcontent {
+	width: 70%;
+	float: left;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #FFF;
+	padding: 3% 5%
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.bottomcontent {
+	width: 70%;
+	float: left;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #FFF;
+	padding: 3% 5%
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+
+.button {
+	width: 70px;
+    height: 30px;
+}
+
+
+
+
+
