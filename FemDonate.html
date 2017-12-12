@@ -32,7 +32,8 @@
 </big></big></big></big>
 <form><big><big>Personal Information</big></big><br>
   <br>
-First name: <input maxlength="7" name="First Name"> Last name: <input name="Last Name"><br>
+  <form enctype="multipart/form-data" action="http://localhost/processing.php">
+First name: <input maxlength="7" name="first_name"> Last name: <input name="last_name"><br>
   <br>
 Username: <input name="username"><br>
   <br>
@@ -41,12 +42,12 @@ Email: <input name="email"><br>
   <big><big>Donation Information</big></big><br>
   <br>
 Donation Amount:<br>
-$<input name="amount"><br>
+$<input name="donations"><br>
 *Minimum donation: $1.00<br>
 <br>
   <br>
 Card Number:<br>
-  <input name="number"><br>
+  <input name="card"><br>
 *This is taken in 16 number form. No dashes or spaces.<br>
   <br>
 CVV:<br>
@@ -62,7 +63,7 @@ Postal Code:<br>
   <br>
   <br>
   <br>
-  <div style="text-align: center;"><input name="DonateButton" type="button"><br>
+  <div style="text-align: center;"><input name="DonateButton" type="submit" value ="Donate Now!"><br>
   </div>
 </form>
 </body></html>
