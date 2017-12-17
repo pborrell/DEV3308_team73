@@ -1,4 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>FemNews</title>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+</head>
+
+<body class="body">
+  <header class="navigation">
+    <img src="http://dastornews.com/wp-content/uploads/2016/01/o-FEMINISM-IN-2014-facebook.jpg">
+    <p><font size="10"> FemNews </font></p>
+
+    <nav><ul>
+      <li class="active"><a href="Fem_front_end.html">Home</a></li>
+      <li><a href="FemAbout.html">About</a></li>
+      <li><a href="FemDonate.html">Donate</a></li>
+
+    </ul></nav>
+
+  </header>
+
+  <div class="mainContent">
+    <div class="content">
+      <article class = "topcontent">
+        <header>
+          <h2><a title="First Post">Emma Watson's Book Club for Feminists</a></h2>
+        </header>
+
+        <footer>
+          	<p class="post-info">Posted January 7, 2017</p>
+        </footer>
+
+        <content>
+        	<p> Emma Watson’s feminist book club now has a name and is open to anyone who wants to join. The UN Women Goodwill ambassador announced the club will be called “Our Shared Shelf” and meetings will be conducted through a group on Goodreads. Emma Watson loves to read.
+
+The actress has that in common with her brainy Harry Potter character Hermione as well as bookish Belle, who she plays in the much-anticipated film Beauty and the Beast, out March 17. In addition to being a bookworm, Watson is also an outspoken feminist and as well as a UN Women Goodwill Ambassador and promoter of the organization’s HeForShe movement, which is dedicated to recruiting men into the movement for gender equality. As a response to her work with the UN, she launched the feminist book club Our Shared Shelf on Goodreads in January 2016, encouraging members to read alongside her. The actress also frequently recommends books on social media and in interviews.
+</p>
+        </content>
+
+      </article>
+      <article class = "bottomcontent">
+        <header>
+          <h2><a title="Second Post">Study Exposes 'Gender Gap' in Media Coverage of Reproductive Issues</a></h2>
+        </header>
+
+        <footer>
+          	<p class="post-info">Posted December 21, 2016</p>
+        </footer>
+
+        <content>
+        	<p> A new study by the Women's Media Center has revealed more than half of news stories focusing on reproductive issues are written by men.
+
+According to WMC Media Watch: the Gender Gap in Coverage of Reproductive Issues, men penned 52 percent of bylines discussing issues of reproductive health care - including contraception and abortion - compared to just 37 percent by women. Moreover, the report, which examined 1,385 news stories published by the twelve highest-circulating media outlets, also found quotes from men outnumber those from women, accounting for 41 percent from men versus a mere 33 percent by women. Men are also more likely to include interviews with other men in their coverage of reproductive heath topics as well as frame them as "political issues" rather than matters of "health," as favored by women.
+
+"Since women play a greater role in reproduction, it would make sense for women to be the majority of the sources and authorities in its coverage," said WMC co-founder Gloria Steinem in response to the study's findings.
+
+Unfortunately, women's underrepresentation in media has persisted across subject matter. Last year, WMC found women authored only 37 percent of print news stories, with men dominating coverage in almost all areas including US politics (65 percent), world politics (64 percent), science (63 percent), and technology (62 percent). WMC's most recent findings, however, were released at a time of increasingly dangerous anti-abortion rhetoric and numerous ideologically-driven political maneuvers aimed at restricting women's access to contraception. The study highlights a critical gap in accurate reporting of one of the most urgent issues affecting women today: reproductive healthcare.
+
+"The American public - and especially women - deserve accurate, informed and experienced media coverage on reproductive health, state and federal legislation, abortion and contraception," said Steinem. "This research is offered in the hope of increasing public information about reproductive justice - which means the right to have or not to have children - as a basic human right."</p>
+        </content>
+
+      </article>
+
+
+    </div>
+  </div>
+
+
+
+</html>
+
+
+<!--
 <html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>FemDonatePage</title></head><body><big><big><big><big><img style="width: 375px; height: 225px;" alt="" src="https://pi.tedcdn.com/r/tedideas.files.wordpress.com/2016/11/feminism_icon.jpg?"></big></big></big></big><big><big><big><big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Join the
 fight!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img style="width: 375px; height: 225px;" alt="" src="http://dastornews.com/wp-content/uploads/2016/01/o-FEMINISM-IN-2014-facebook.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</big></big></big></big><big><big><big><big> </big></big></big></big><br>
@@ -6,9 +84,10 @@ fight!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img style="w
 Donate today!<br>
 <br>
 </big></big></big></big>
-<form><big><big>Personal Information</big></big><br>
+<form enctype="multipart/form-data"
+action="http://localhost/processing.php"><big><big>Personal Information</big></big><br>
   <br>
-First name: <input maxlength="7" name="First Name"> Last name: <input name="Last Name"><br>
+First name: <input maxlength="7" name="first_name"> Last name: <input name="last_name"><br>
   <br>
 Username: <input name="username"><br>
   <br>
@@ -17,14 +96,14 @@ Email: <input name="email"><br>
   <big><big>Donation Information</big></big><br>
   <br>
 Donation Amount:<br>
-$<input name="amount"><br>
+$<input name="donations"><br>
 *Minimum donation $1<br>
 **If you do not donate today you are legally required to tell all your
 neighbors and your prospective employers that you are a bonified jerk
 and you cannot be trusted with any sort of ethical problem<br>
   <br>
 Card Number:<br>
-  <input name="number"><br>
+  <input name="card"><br>
 *This is taken in 16 number form. No dashes or spaces.<br>
   <br>
 CVV:<br>
@@ -43,4 +122,6 @@ Postal Code:<br>
   <div style="text-align: center;"><input name="DonateButton" type="button"><br>
   </div>
 </form>
+</form>
 </body></html>
+-->
