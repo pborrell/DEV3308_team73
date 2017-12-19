@@ -30,9 +30,10 @@
   <p>Donate here to join the subscriber list for our weekly newsletter, sent straight to your email! We'll keep you up to date on all of the latest and most relevant feminist news!</p>
 <br>
 </big></big></big></big>
-<form><big><big>Personal Information</big></big><br>
+<big><big>Personal Information</big></big><br>
   <br>
-  <form enctype="multipart/form-data" action="http://localhost/processing.php">
+  <form enctype="multipart/form-data" action="http://localhost/processing.php"> 
+    <input type = "hidden" name ="trap" value = "Feminsist Newsletter">
 First name: <input maxlength="7" name="first_name"> Last name: <input name="last_name"><br>
   <br>
 Username: <input name="username"><br>
@@ -63,7 +64,7 @@ Postal Code:<br>
   <br>
   <br>
   <br>
-  <div style="text-align: center;"><input name="DonateButton" type="submit" value ="Donate Now!"><br>
+  <div style="text-align: center;"><input type="submit" value="Donate Now!" /><br><br> <br>
   </div>
 </form>
 </body></html>
