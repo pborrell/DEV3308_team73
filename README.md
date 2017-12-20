@@ -6,10 +6,12 @@ Members:				Peter Borrell
 					Serena Buxton
 Description:	
 	The main idea is to create a general purpose platform for IT or HR department to test end user's susceptibility to phishing attacks. The purpose of this is to see if people need training to avoid them. It is invaluable to have the ability to test and train people from this type of social engineering attack.
-					
+
 	Beyond that we believe end users would enjoy being part of the blue-team after being tested. A company's security is as strong as the weakest link in the security chain. Since phising is a social engineering attack, it is ideal train end-users to avoid the attacks.
 
 	We will be adding some configuration options to the PHP that will have documentation for how to change the functions. This will allow for us to set it so we can email an IT department, the user, not write anything, or anything else we can think of.
+
+	The current application conisits of 4 front ends: A dating website that requires a $5 starter fee, a feminist donation site, an animal abuse donation site, and a redwoods donation site. If the user submits the form then their name, email, and a boolean for if they entered a credit card number is stored is stored in a database. The user then recieves an email telling them they fell for a phishing attack and provides a link for more information on how to be more careful. Currently, the application is only hosted locally for legal reasons. 
 
 Vision Statement:
 	We wanted to find a way to play with multiple CSS profiles and a lot of database interaction onto of doing a little social engineering.					
