@@ -4,8 +4,8 @@ Members:				Peter Borrell
 					Victoria Manchester
 					Ziheng Zhu
 					Serena Buxton
-Description:	
-	The main idea is to create a general purpose platform for IT or HR department to test end user's susceptibility to phishing attacks. The purpose of this is to see if people need training to avoid them. It is invaluable to have the ability to test and train people from this type of social engineering attack.
+Description: 
+The main idea is to create a general purpose platform for IT or HR department to test end user's susceptibility to phishing attacks. The purpose of the project is to test the necessity of training. It is invaluable to have the ability to test and train people from phishing attacks.
 
 	Beyond that we believe end users would enjoy being part of the blue-team after being tested. A company's security is as strong as the weakest link in the security chain. Since phising is a social engineering attack, it is ideal train end-users to avoid the attacks.
 
@@ -13,11 +13,9 @@ Description:
 
 	The current application conisits of 4 front ends: A dating website that requires a $5 starter fee, a feminist donation site, an animal abuse donation site, and a redwoods donation site. If the user submits the form then their name, email, and a boolean for if they entered a credit card number is stored is stored in a database. The user then recieves an email telling them they fell for a phishing attack and provides a link for more information on how to be more careful. Currently, the application is only hosted locally for legal reasons. 
 
-Vision Statement:
-	We wanted to find a way to play with multiple CSS profiles and a lot of database interaction onto of doing a little social engineering.					
-Motivation:	
-	We want to do this so we can write a web application that has multiple database interactions and using multiple CSS on one website page, a "theme'. The security leak of Equifax's information might result in more phishing attacks to collect dots that are not included in a credit reporting company's databases.
-
+Vision Statement: 
+An Implementation method with multiple CSS profiles and database interactions while limiting the interaction with social engineering is needed. 
+Motivation: The purpose of the project is to write a web application that has multiple database interactions and using multiple CSS on one website page, a "theme'. The security leak of Equifax's information might result in more phishing attacks to collect dots that are not included in a credit reporting company's databases.
 Risks:
 	1)It would be very easy to get personal information to be writes to databases. 
 	2)Also setting up the database correctly. 
@@ -32,8 +30,8 @@ Risk Migration Plan:
 Version Control:
 	GIThub, the repository is DEV3308_team73.
 
-Development Method:
-	Agile, we will work on multiple features at a time with people doing different things concurrently. We are going to test features on a branch outside of master and when ever we get something working we will merge it back into master. Afterward we will down stream working features so we have an idea how the end project will work when we get later in the project. 
+Development Method: 
+Agile, Multiple features will be implemented at a time with team members doing different things concurrently. Testing features will be on a branch outside of master. Working codes will be merged back into master. We will down stream working features so we have an idea how the end project will work when we get later in the project.
 
 Collaboration Tool:
 	Waffle.io integrated with GIThub. Google Hangouts for communication and remote collaboration and adding GroupMe to talk amongst.
